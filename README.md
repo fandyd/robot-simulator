@@ -10,7 +10,9 @@ Table of Contents
     * [Go Version](#go-version)
     * [Working Directory](#working-directory)
   * [Running tests](#running-tests)
-  * [Compiling/Running the Application](#running-the-application)
+  * [Compiling Or Running the Application](#compiling-or running-the-application)
+    * [Compiling](#compiling)
+    * [Running](#running)
   * [Commands](#commands)
 
 ## Preparations
@@ -42,50 +44,52 @@ Ensure the structure of your working directory is `$GOPATH/src/robot-simulator/.
 
 ## Running tests
 
-## Compiling/Running the Application
+## Compiling Or Running the Application
 
-### Compiling the Application
+### Compiling
 
 To Compile the code first make sure you are in the working director
 
-  $ pwd
-  $ /Users/macuser/Document/gowork/src/robot-simulator
+    $ pwd
+    $ /Users/macuser/Document/gowork/src/robot-simulator
 
 Then download all dependencies
 
-  $ go get -t -v ./...
+    $ go get -t -v ./...
 
 Then compile the code, which will create an executable under `$GOPATH/bin/robot-simulator`
 
-  $ go build *.go
+    $ go build *.go
 
-### Running the Application
+### Running
 
 You can run the application from the executable file generated after you compile the code
 
-  $ /Users/macuser/Document/gowork/bin/robot-simulator
-  or
-  $ /Users/macuser/Document/gowork/src/robot-simulator/main
+    $ /Users/macuser/Document/gowork/bin/robot-simulator
+or
+    $ /Users/macuser/Document/gowork/src/robot-simulator/main
 
 Alternatively you can also run the code without compiling the code from your working directory
 
-  $ go run *.go
+    $ go run *.go
 
 ## Commands
 
 Below are available commands to simulate the robot:
-  `PLACE X,Y,F`
-  PLACE will put the toy robot on the table in position X,Y and facing NORTH,
-  SOUTH, EAST or WEST.
+`PLACE X,Y,F`
+PLACE will put the toy robot on the table in position X,Y and facing NORTH,
+SOUTH, EAST or WEST.
 
-  `MOVE`
-  MOVE will move the toy robot one unit forward in the direction it is
-  currently facing.
+`MOVE`
+MOVE will move the toy robot one unit forward in the direction it is
+currently facing.
 
-  `LEFT` & `RIGHT`
-  LEFT and RIGHT will rotate the robot 90 degrees in the specified direction
-  without changing the position of the robot.
+`LEFT`
+LEFT will rotate the robot 90 degrees to the left from the robot direction without changing the position of the robot.
 
-  `REPORT`
-  REPORT will announce the X,Y and F of the robot. This can be in any form,
-  but standard output is sufficient.
+`RIGHT`
+RIGHT will rotate the robot 90 degrees to the right from the robot direction without changing the position of the robot.
+
+`REPORT`
+REPORT will announce the X,Y and F of the robot. This can be in any form,
+but standard output is sufficient.
