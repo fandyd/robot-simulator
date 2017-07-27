@@ -14,8 +14,8 @@ Table of Contents
     * [Compiling](#compiling)
     * [Running](#running)
       * [With Table Width and Length Option](#with-table-width-and-length-option)
-      * [With File Commands](#with-file-commands)
-      * [Help](#help)
+      * [With File Commands Option](#with-file-commands-option)
+      * [Help Option](#help-option)
   * [Commands](#commands)
 
 ## Preparations
@@ -77,19 +77,19 @@ Alternatively you can also compile and run the code from your working directory
 
     $ go run main.go
 
-#### With Table Width and Length
+#### With Table Width and Length Option
 
 You are able to change the width and length of the table before starting the program by providing it using flag `-width` and `-length` like below.
 
     $ ./main -width=10 -length=10
 
-#### With File Commands
+#### With File Commands Option
 
 You are also able to feed commands using flat file in your working directory by providing the filename before starting the program by using flag `-f` like below
 
     $ ./main -f=test-data.Text
 
-#### Help
+#### Help Option
 
 Help is available on how to use the flag options by using `-h` like below
 
