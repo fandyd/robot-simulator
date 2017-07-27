@@ -13,8 +13,8 @@ Table of Contents
   * [Compiling Or Running the Application](#compiling-or-running-the-application)
     * [Compiling](#compiling)
     * [Running](#running)
-      * [With Table Width and Length Option](#with-table-width-and-lenth-option)
-      * [With file Commands](#with-file-commands)
+      * [With Table Width and Length Option](#with-table-width-and-length-option)
+      * [With File Commands](#with-file-commands)
       * [Help](#help)
   * [Commands](#commands)
 
