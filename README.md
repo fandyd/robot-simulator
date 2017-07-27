@@ -10,9 +10,12 @@ Table of Contents
     * [Go Version](#go-version)
     * [Working Directory](#working-directory)
   * [Running tests](#running-tests)
-  * [Compiling Or Running the Application](#compiling-or running-the-application)
+  * [Compiling Or Running the Application](#compiling-or-running-the-application)
     * [Compiling](#compiling)
     * [Running](#running)
+      * [With Table Width and Length Option](#with-table-width-and-lenth-option)
+      * [With file Commands](#with-file-commands)
+      * [Help](#help)
   * [Commands](#commands)
 
 ## Preparations
@@ -44,7 +47,10 @@ Ensure the structure of your working directory is `$GOPATH/src/robot-simulator/.
 
 ## Running tests
 
+    $ go test -v -cover ./...
+
 ## Compiling Or Running the Application
+This program has been pre-compiled and the executable is called main in the working folder.
 
 ### Compiling
 
@@ -63,33 +69,43 @@ Then compile the code, which will create an executable under `$GOPATH/bin/robot-
 
 ### Running
 
-You can run the application from the executable file generated after you compile the code
+You can run the application from the executable file in the working directory
 
-    $ /Users/macuser/Document/gowork/bin/robot-simulator
-or
-    $ /Users/macuser/Document/gowork/src/robot-simulator/main
+    $ /Users/macuser/Document/gowork/robot-simulator/main
 
-Alternatively you can also run the code without compiling the code from your working directory
+Alternatively you can also compile and run the code from your working directory
 
-    $ go run *.go
+    $ go run main.go
+
+#### With Table Width and Length
+
+You are able to change the width and length of the table before starting the program by providing it using flag `-width` and `-length` like below.
+
+    $ ./main -width=10 -length=10
+
+#### With File Commands
+
+You are also able to feed commands using flat file in your working directory by providing the filename before starting the program by using flag `-f` like below
+
+    $ ./main -f=test-data.Text
+
+#### Help
+
+Help is available on how to use the flag options by using `-h` like below
+
+    $ ./main -h
 
 ## Commands
 
 Below are available commands to simulate the robot:
-`PLACE X,Y,F`
-PLACE will put the toy robot on the table in position X,Y and facing NORTH,
-SOUTH, EAST or WEST.
 
-`MOVE`
-MOVE will move the toy robot one unit forward in the direction it is
+`PLACE X,Y,F` will put the toy robot on the table in position X,Y,F.
+
+`MOVE` will move the toy robot one unit forward in the direction it is
 currently facing.
 
-`LEFT`
-LEFT will rotate the robot 90 degrees to the left from the robot direction without changing the position of the robot.
+`LEFT` will rotate the robot 90 degrees to the left from the robot direction without changing the position of the robot.
 
-`RIGHT`
-RIGHT will rotate the robot 90 degrees to the right from the robot direction without changing the position of the robot.
+`RIGHT` will rotate the robot 90 degrees to the right from the robot direction without changing the position of the robot.
 
-`REPORT`
-REPORT will announce the X,Y and F of the robot. This can be in any form,
-but standard output is sufficient.
+`REPORT` will announce the X,Y and F of the robot. This will print out X,Y,F of the current state of the robot.
