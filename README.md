@@ -22,7 +22,7 @@ Table of Contents
 
 ### Install Golang
 
-Please Follow the instruction [here for mac](https://golang.org/doc/install)
+Please Follow the instruction [here](https://golang.org/doc/install)
 
 
 ### Set Up ENV
